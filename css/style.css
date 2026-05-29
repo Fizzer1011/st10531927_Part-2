@@ -149,8 +149,103 @@ td img{
     border-radius: 10px;
 }
 
+th{
+    color:  rgb(22, 231, 22);
+}
+
 .menu-page{
     padding-top: 120px;
     min-height: 100vh;
     padding-bottom: 80px;
+}
+
+/*Code to make responsive to tablet screens*/
+@media screen and (max-width: 1024px) {
+    .navbar{
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .navbar ul{
+        margin-top: 10px;
+    }
+
+    .navbar ul li{
+        margin: 10px;
+    }
+
+    .content h1{
+        font-size: 3rem;
+    }
+
+    .content p{
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    table{
+        width: 95%;
+    }
+
+    td img{
+        width: 100px;
+        height: auto; 
+    }
+}
+
+/*Code to make responsive to mobile screens*/
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo{
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar ul{
+        padding: 0;
+    }
+
+    .navbar ul li{
+        display: block;
+        margin: 15px 0;
+        }
+
+    .content {
+        padding: 140px 20px 20px;
+    }
+
+    .content h1{
+        font-size: 2rem;
+        margin-top: 20px;        
+    }
+
+    .content p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    button{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    td img{
+        width: 80px;
+        height: auto;
+    }
+
+    footer{
+        position: relative;
+    }
+        
 }
