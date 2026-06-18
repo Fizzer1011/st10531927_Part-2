@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enquire about our fresh salads or place a custom order with Foraged by Farhana.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Enquiry | Foraged by Farhana</title>
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/Foraged_logo.jpg" class="logo" alt="Foraged by Farhana Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <hr color="#1d9704">
+    </div>
+
+    <div class="content enquiry-page">
+        <h1>Make an Enquiry</h1>
+        <p>Want a custom salad or have a special request? Fill in the form below.</p>
+
+        <form id="enquiryForm" class="form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone (WhatsApp):</label>
+            <input type="tel" id="phone" placeholder="083 573 6255">
+
+            <label for="service">What are you enquiring about?</label>
+            <select id="service" required>
+                <option value="">Select...</option>
+                <option value="custom">Custom Salad Order</option>
+                <option value="bulk">Bulk/Catering Order</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message / Special Requests:</label>
+            <textarea id="message" rows="5" required></textarea>
+
+            <button type="submit">Send Enquiry</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© Foraged_by_Farhana<br>Created by: Faeez Beg</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
