@@ -79,6 +79,7 @@ body{
     padding: 40px 20px;
 }
 
+
 .content h1{
     font-size: 70px;
     margin-top: 20px;
@@ -105,6 +106,7 @@ body{
 .menu-page{
     padding-top: 60px;
 }
+
 
 /*  FORM STYLES */
 
@@ -318,3 +320,4 @@ footer{
         font-size: 0.9rem;
     }
 }
+
