@@ -56,27 +56,27 @@
                     <a href = "https://www.instagram.com/foraged_by_farhana?igsh=MWk3NXp1Nmh0bGRxMA==" style="color: rgb(22, 231, 22); "> Foraged IG</a> 
                 </p>
 
-
                 <h2>Send us a Message</h2>
-                <form id="contactForm" class="form">
+                <form id="contactForm" action="https://formspree.io/f/mvznjajb" method="POST">
                     <label for="cname">Full Name:</label>
-                    <input type="text" id="cname" required>
+                    <input type="text" id="cname" name="name" required>
 
                     <label for="cemail">Email:</label>
-                    <input type="email" id="cemail" required>
+                    <input type="email" id="cemail" name="email" required>
 
                     <label for="subject">Subject:</label>
-                    <select id="subject" required>
+                    <select id="subject" name="subject" required>
                         <option value="">Select...</option>
-                        <option value="order">Order Inquiry</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="other">Other</option>
+                        <option value="Order Inquiry">Order Inquiry</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Other">Other</option>
                     </select>
 
                     <label for="cmessage">Message:</label>
-                    <textarea id="cmessage" rows="5" required></textarea>
+                    <textarea id="cmessage" name="message" rows="5" required></textarea>
 
                     <button type="submit">Send Message</button>
+                </form>
 
                 </form>
             </div>
