@@ -4,11 +4,11 @@
     font-family: sans-serif;
 }
 
-/* ====================== MAIN LAYOUT ====================== */
+/*  MAIN LAYOUT  */
 
 body{
     margin: 0;
-    padding-top: 155px;           /* Increased slightly to fit navbar + green line */
+    padding-top: 155px;           
     padding-bottom: 90px;
     background-image: linear-gradient(rgba(0,0,0,0.53),rgba(0,0,0,0.53)), url(../images/orchard_cartoon_wallpaper.jpg);
     background-size: cover;
@@ -22,7 +22,7 @@ body{
     width: 100%;
 }
 
-/* Fixed Navbar + Green Line */
+
 .navbar{
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@ body{
     justify-content: space-between;
     background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0,0,0,0.88));
     z-index: 1000;
-    border-bottom: 3px solid #1d9704;   /* Green line now part of navbar */
+    border-bottom: 3px solid #1d9704;   
 }
 
 .logo{
@@ -106,7 +106,7 @@ body{
     padding-top: 60px;
 }
 
-/* ====================== FORM STYLES ====================== */
+/*  FORM STYLES */
 
 .form {
     max-width: 650px;
@@ -145,7 +145,7 @@ button[type="submit"] {
     border-radius: 6px;
 }
 
-/* ====================== MENU TABLE ====================== */
+/* MENU TABLE  */
 
 table{
     width: 80%;
@@ -173,7 +173,7 @@ th{
     padding: 12px;
 }
 
-/* ====================== BUTTONS ====================== */
+/*  BUTTONS */
 
 button{
     width: 200px;
@@ -215,7 +215,7 @@ a{
     color: inherit;
 }
 
-/* ====================== FOOTER ====================== */
+/* FOOTER  */
 
 footer{
     background-color: black;
@@ -230,7 +230,7 @@ footer{
     font-size: 0.95rem;
 }
 
-/* ====================== RESPONSIVE ====================== */
+/*  RESPONSIVE  */
 
 /* Tablet */
 @media screen and (max-width: 1024px) {
@@ -264,7 +264,7 @@ footer{
 /* Mobile */
 @media screen and (max-width: 768px) {
     body {
-        padding-top: 195px;       /* Adjusted for taller stacked navbar + green line */
+        padding-top: 195px;      
         padding-bottom: 110px;
     }
 
