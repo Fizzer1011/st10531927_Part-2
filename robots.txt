@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fizzer1011.github.io/st10531927_Part-2/sitemap.xml
