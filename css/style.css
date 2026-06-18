@@ -4,45 +4,36 @@
     font-family: sans-serif;
 }
 
-.banner{
-    width: 100%;
-    height: 100vh;
-}
+/* ====================== MAIN LAYOUT ====================== */
 
 body{
     margin: 0;
-    padding: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.53),rgba(0,0,0,0.53)), url(../images/orchard_cartoon_wallpaper.jpg) ;
+    padding-top: 155px;           /* Increased slightly to fit navbar + green line */
+    padding-bottom: 90px;
+    background-image: linear-gradient(rgba(0,0,0,0.53),rgba(0,0,0,0.53)), url(../images/orchard_cartoon_wallpaper.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.banner{
     width: 100%;
-    padding: 20px;
 }
 
+/* Fixed Navbar + Green Line */
 .navbar{
     position: fixed;
+    top: 0;
     width: 100%;
-    margin: auto;
-    padding: 25px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.671),rgba(0,0,0,0.671));
-    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0,0,0,0.88));
     z-index: 1000;
-    top: 0;                  
+    border-bottom: 3px solid #1d9704;   /* Green line now part of navbar */
 }
 
 .logo{
@@ -50,18 +41,21 @@ footer{
     height: 100px;
     cursor: pointer;
 }
+
 .navbar ul li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
+
 .navbar ul li a{
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     position: relative;
 }
+
 .navbar ul li::after{
     content: "";
     height: 3px;
@@ -72,28 +66,115 @@ footer{
     bottom: -10px;
     transition: 0.3s;
 }
+
 .navbar ul li:hover:after{
     width: 100%;
-
 }
+
+/* Content Styling */
 .content{
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: center;
     color: #fff;
-    padding-top: 120px;
+    padding: 40px 20px;
 }
+
 .content h1{
     font-size: 70px;
-    margin-top: 80px;
+    margin-top: 20px;
 }
+
 .content p{
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
+    max-width: 900px;
 }
+
+/* Sub-pages content */
+.menu-page,
+.faq-page,
+.enquiry-page,
+.contact-page,
+.About .content {
+    padding: 40px 20px 60px;
+    color: white;
+    min-height: 70vh;
+}
+
+.menu-page{
+    padding-top: 60px;
+}
+
+/* ====================== FORM STYLES ====================== */
+
+.form {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    color: white;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1d9704;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.9);
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: #1d9704;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* ====================== MENU TABLE ====================== */
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 30px auto;
+}
+
+td{
+    border: 1px solid rgba(225, 225, 225, 0.2);
+    padding: 10px;
+    color: white;
+    vertical-align: middle;
+}
+
+td img{
+    width: 125px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+th{
+    color: rgb(22, 231, 22);
+    padding: 12px;
+}
+
+/* ====================== BUTTONS ====================== */
+
 button{
     width: 200px;
     padding: 15px 0;
@@ -134,36 +215,24 @@ a{
     color: inherit;
 }
 
-table{
-    width: 80%;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
+/* ====================== FOOTER ====================== */
 
-td{
-    border: 1px solid rgba(225, 225, 225, 0.2);
-    padding: 10px;
+footer{
+    background-color: black;
     color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    font-size: 0.95rem;
 }
 
-td img{
-    width: 125px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
+/* ====================== RESPONSIVE ====================== */
 
-th{
-    color:  rgb(22, 231, 22);
-}
-
-.menu-page{
-    padding-top: 120px;
-    min-height: 100vh;
-    padding-bottom: 80px;
-}
-
-/*Code to make responsive to tablet screens*/
+/* Tablet */
 @media screen and (max-width: 1024px) {
     .navbar{
         flex-direction: column;
@@ -182,11 +251,6 @@ th{
         font-size: 3rem;
     }
 
-    .content p{
-        width: 90%;
-        font-size: 1rem;
-    }
-
     table{
         width: 95%;
     }
@@ -197,11 +261,17 @@ th{
     }
 }
 
-/*Code to make responsive to mobile screens*/
+/* Mobile */
 @media screen and (max-width: 768px) {
+    body {
+        padding-top: 195px;       /* Adjusted for taller stacked navbar + green line */
+        padding-bottom: 110px;
+    }
+
     .navbar{
         flex-direction: column;
         text-align: center;
+        padding: 15px 0;
     }
 
     .logo{
@@ -216,15 +286,10 @@ th{
     .navbar ul li{
         display: block;
         margin: 15px 0;
-        }
-
-    .content {
-        padding: 140px 20px 20px;
     }
 
     .content h1{
         font-size: 2rem;
-        margin-top: 20px;        
     }
 
     .content p{
@@ -249,110 +314,7 @@ th{
     }
 
     footer{
-        position: relative;
-    }
-        
-}
-
-.faq-page {
-    flex: 1 0 auto;
-    min-height: 70vh;           
-    padding-top: 100px;
-    padding-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-
-.faq-page {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-}
-
-label {
-    display: block;
-    margin: 12px 0 5px;
-    color: white;
-    font-weight: bold;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #1d9704;
-    border-radius: 5px;
-    background: rgba(255,255,255,0.9);
-}
-
-button[type="submit"] {
-    width: 100%;
-    background: #1d9704;
-    color: white;
-    border: none;
-}
-
-
-/* ====================== FINAL PART 3 FIXES ====================== */
-
-
-.enquiry-page .content,
-.contact-page .content,
-.faq-page .content,
-.menu-page .content,
-.About .content {
-    position: relative !important;
-    top: auto !important;
-    transform: none !important;
-    padding-top: 180px !important;     
-    padding-bottom: 160px !important;  
-    text-align: left;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-
-.content {
-    padding-bottom: 120px;
-}
-
-
-.form {
-    max-width: 650px;
-    margin: 30px auto;
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.75);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-button[type="submit"] {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    padding: 14px 0;
-}
-
-
-footer {
-    position: fixed;
-    bottom: 0;
-    z-index: 10;
-}
-
-@media screen and (max-height: 600px) {
-    footer {
-        position: relative;
-        margin-top: 50px;
+        padding: 15px 10px;
+        font-size: 0.9rem;
     }
 }
